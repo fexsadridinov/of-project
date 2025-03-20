@@ -32,7 +32,7 @@ const InfoSection: React.FC = () => {
         <section className="min-h-screen flex flex-col custom-scroll-mt" id="info">
             <div className="flex-grow relative flex items-center justify-center">
                 {/* Heading positioned absolutely */}
-                <h2 className="absolute md:top-50 md:left-25 sm:top-[30px] sm:left-[15px] text-left text-7xl md:text-6xl sm:text-3xl text-red-800">
+                <h2 className="our-services-heading">
                     Our Services
                 </h2>
                 {/* Grid container pushed down so it doesn't overlap the heading */}
