@@ -73,8 +73,48 @@ body {
   }
 }
 
+.our-services-heading {
+  position: absolute;
+  text-align: left;
+  font-size: 4.5rem;
+  color: #991b1b;
+}
+
+
 @media (max-width: 640px) {
+  .our-services-heading {
+    top: 30px;
+    left: 45px;
+    font-size: 3rem;
+  }
+
   .custom-scroll-mt {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 150px;
+  }
+}
+
+/* Medium devices */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .our-services-heading {
+    top: 155px;
+    left: 25px;
+    font-size: 3.75rem; /* Tailwind's text-6xl */
+  }
+
+  .custom-scroll-mt {
+    scroll-margin-top: 10px;
+  }
+}
+
+/* Large devices */
+@media (min-width: 1024px) {
+  .our-services-heading {
+    top: 330px;
+    left: 100px;
+    font-size: 3.75rem; /* Tailwind's text-6xl */
+  }
+
+  .custom-scroll-mt {
+    scroll-margin-top: 0;
   }
 }
