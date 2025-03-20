@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  /*background: linear-gradient(to bottom, #991b1b, #f87171);*/
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@layer utilities {
+  .c-space {
+    @apply sm:px-10 px-5;
+  }
+
+  .nav-ul {
+    @apply flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20;
+  }
+
+  .nav-li {
+    @apply border-transparent text-white hover:text-red-200 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+  }
+
+  .nav-li_a {
+    @apply text-xl text-white hover:text-red-200 transition-colors;
+  }
+
+  .nav-sidebar {
+    @apply absolute left-0 right-0 bg-red-500 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block;
+  }
+  /*Buttons*/
+  .btn {
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md transition-all active:scale-95 bg-red-800 hover:bg-red-600 text-white text-xl mx-auto;
+  }
+
+  .btn-ping {
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-red-200 opacity-75;
+  }
+
+  .btn-ping_dot {
+    @apply relative inline-flex rounded-full h-3 w-3 bg-white;
+  }
+
+  .arrow-btn {
+    @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full;
+  }
+
+  /* contact section */
+  .contact-container {
+    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12;
+  }
+
+  .field-label {
+    @apply text-lg text-red-900 pl-1;
+  }
+
+  .field-input {
+    @apply w-full bg-red-50 px-5 py-2 min-h-14 rounded-lg placeholder:text-red-300 text-lg text-gray-700 focus:outline-none;
+  }
+
+  .field-btn {
+    @apply bg-red-800 px-5 py-2 min-h-12 rounded-lg shadow-red-800 shadow-2xl flex justify-center items-center text-lg text-white gap-3;
+  }
+
+  .field-btn_arrow {
+    @apply w-2.5 h-2.5 object-contain invert brightness-0;
+  }
+}
+
+@media (max-width: 640px) {
+  .custom-scroll-mt {
+    scroll-margin-top: 100px;
+  }
+}
